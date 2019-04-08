@@ -8,7 +8,7 @@ spring:
     port: 5672    #默认端口就是5672，一般情况下不需要更改
     username: guest
     password: guest #默认密码
-
+#github的账号信息
   cloud:
     config:
       server:
