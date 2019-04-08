@@ -5,8 +5,8 @@ spring:
     name: config-server
   rabbitmq:
     host: 127.0.0.1
-    port: 5672    #默认端口就是5672，一般情况下不需要更改
-    username: guest
+    port: 5672    #默认端口就是5672，一般情况下不用更改
+    username: guest #默认用户名为guest
     password: guest
 
   cloud:
