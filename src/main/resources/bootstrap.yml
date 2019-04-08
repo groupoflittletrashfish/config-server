@@ -1,0 +1,28 @@
+server:
+ port: 8096
+spring:
+  application:
+    name: config-server
+  rabbitmq:
+    host: 127.0.0.1
+    port: 5672
+    username: guest
+    password: guest
+
+  cloud:
+    config:
+      server:
+        git:
+          uri: https://github.com/groupoflittletrashfish/springcloud-config
+          username: groupoflittletrashfish
+          password: 1e5ghj9
+eureka:
+  client:
+    service-url:
+      defaultZone: http://127.0.0.1:8091/eureka/,http://127.0.0.1:8092/eureka/,http://127.0.0.1:8093/eureka/
+#必须在config的服务端和客户端定义，否则自动刷新配置将失效
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
